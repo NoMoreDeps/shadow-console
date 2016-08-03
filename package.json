@@ -5,7 +5,8 @@
   "main": "index.js",
   "typings": "./bin/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc && tsc -p samples"
   },
   "keywords": [
     "text",
