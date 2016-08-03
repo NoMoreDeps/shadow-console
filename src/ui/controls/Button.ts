@@ -1,8 +1,7 @@
 import {UI} from "../UI";
+import {Control} from "./Control";
 
-export class Button {
-  protected _width: number;
-  protected _height: number;
+export class Button extends Control {
   protected _text: string;
   protected _autoSize: boolean;
   protected _paddingTop: number;
@@ -15,6 +14,8 @@ export class Button {
   protected _focused: boolean;
 
   constructor() {
+    super();
+
     this._text = "Default";
     this._width = this._text.length + 2;
     this._height = 3;
@@ -24,4 +25,6 @@ export class Button {
     this._paddingBottom = 0;
     this._autoSize = true;
   }
+
+
 }
