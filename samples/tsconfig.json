@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "outDir": "./out"
+    },
+    "exclude": [
+        "node_modules",
+        "out"
+    ],
+    "files": [
+        "src/SimpleText.ts",
+        "src/SimpleInput.ts",
+        "src/SimpleUI.ts",
+        "../typings/index.d.ts"
+    ]
+}

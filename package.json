@@ -1,0 +1,19 @@
+{
+  "name": "shadow-console",
+  "version": "1.0.0",
+  "description": "shadow console module",
+  "main": "index.js",
+  "typings": "./bin/index.d.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "text",
+    "console"
+  ],
+  "author": "fskorzec",
+  "license": "MIT",
+  "devDependencies": {
+    "jest-cli": "^13.2.3"
+  }
+}

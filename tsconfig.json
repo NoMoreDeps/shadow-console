@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "outDir"        : "./bin",
+        "declaration" : true
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "files" : [
+        "src/Index.ts",
+        "typings/index.d.ts"
+    ]
+}

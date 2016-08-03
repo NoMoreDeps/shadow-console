@@ -1,0 +1,38 @@
+import { toStringType, BaseTerminal } from "./core/BaseTerminal";
+export declare class FTerminal extends BaseTerminal {
+    constructor(autoReset?: boolean);
+    default(text: toStringType): this;
+    red(text?: toStringType): this;
+    black(text?: toStringType): this;
+    green(text?: toStringType): this;
+    yellow(text?: toStringType): this;
+    blue(text?: toStringType): this;
+    magenta(text?: toStringType): this;
+    cyan(text?: toStringType): this;
+    lightGray(text?: toStringType): this;
+    darkGray(text?: toStringType): this;
+    lightRed(text?: toStringType): this;
+    lightGreen(text?: toStringType): this;
+    lightYellow(text?: toStringType): this;
+    lightBlue(text?: toStringType): this;
+    lightMagenta(text?: toStringType): this;
+    lightCyan(text?: toStringType): this;
+    white(text?: toStringType): this;
+    bgDefault(text?: toStringType): this;
+    bgBlack(text?: toStringType): this;
+    bgRed(text?: toStringType): this;
+    bgGreen(text?: toStringType): this;
+    bgYellow(text?: toStringType): this;
+    bgBlue(text?: toStringType): this;
+    bgMagenta(text?: toStringType): this;
+    bgCyan(text?: toStringType): this;
+    bgLightGray(text?: toStringType): this;
+    bgDarkGray(text?: toStringType): this;
+    bgLightRed(text?: toStringType): this;
+    bgLightGreen(text?: toStringType): this;
+    bgLightYellow(text?: toStringType): this;
+    bgLightBlue(text?: toStringType): this;
+    bgLightMagenta(text?: toStringType): this;
+    bgLightCyan(text?: toStringType): this;
+    bgWhite(text?: toStringType): this;
+}
