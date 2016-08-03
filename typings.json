@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "es6-promise": "registry:npm/es6-promise#3.0.0+20160723033700"
+  },
+  "globalDependencies": {
+    "jest": "registry:env/jest#0.9.2+20160321204158",
+    "node": "registry:env/node#6.0.0+20160723033700",
+    "pngjs2": "registry:dt/pngjs2#2.0.0+20160316155526"
+  }
+}
