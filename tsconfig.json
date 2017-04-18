@@ -5,13 +5,10 @@
         "noImplicitAny": false,
         "sourceMap": false,
         "outDir"        : "./bin",
+        "rootDirs": [
+            "src",
+            "samples"
+        ],
         "declaration" : true
-    },
-    "exclude": [
-        "node_modules"
-    ],
-    "files" : [
-        "src/Index.ts",
-        "typings/index.d.ts"
-    ]
+    }
 }
