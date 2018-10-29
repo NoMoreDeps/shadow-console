@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  * Copyright (c) <2016> <Beewix Interactive>
- * Author <François Skorzec>
+ * Author <François Skorzec>xxww
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
  * files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
@@ -15,9 +15,9 @@
  * BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT
  * OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-import {EscColorClosingChar, EscOpeningChar, EscPositionClosingChar} from "./Constant";
-import {TerminalStreamWriter} from "../TerminalStreamWriter";
-import {EventEmitter} from "events";
+import { EscColorClosingChar, EscOpeningChar, EscPositionClosingChar} from "./Constant"              ;
+import { TerminalStreamWriter}                                        from "../TerminalStreamWriter" ;
+import { EventEmitter}                                                from "events"                  ;
 
 /**
  * Defines a compatible type with a toString function
@@ -32,7 +32,6 @@ export type toStringType = { toString: () => string };
 export abstract class BaseTerminal extends EventEmitter {
   protected _x: number = 0;
   protected _y: number = 0;
-  protected _autoReset: boolean;
   protected _streamWriterDataEventHandler: (data: Array<string>) => void;
 
   protected _buffer: string = "";
@@ -51,9 +50,8 @@ export abstract class BaseTerminal extends EventEmitter {
     return this;
   }
 
-  constructor(autoReset: boolean = false) {
+  constructor() {
     super();
-    this._autoReset = autoReset;
     process.stdin.setEncoding("utf8");
 
     this.on("write", (data: Array<string>) => {
@@ -75,23 +73,11 @@ export abstract class BaseTerminal extends EventEmitter {
   }
 
   /**
-   * Gets or sets a value indicating wether or not a write operation will reset color settings automaticaly.
-   * @property {boolean} autoReset
-   */
-  get autoReset(): boolean {
-    return this._autoReset;
-  }
-
-  set autoReset(value: boolean) {
-    this._autoReset = value;
-  }
-
-  /**
    * Resets all color settings
    * @method reset
    */
   reset(): this {
-    return this._color(39)._color(49);
+    return this._color(0)._color(0);
   }
 
   clearTerminal(): this {
@@ -165,13 +151,13 @@ export abstract class BaseTerminal extends EventEmitter {
     console.clear();
   }
 
+  clearBuffer(): void {
+    this._buffer = "";
+  }
+
   write(object: toStringType = void 0): this {
     if (object !== void 0) {
       this.text(object);
-    }
-
-    if (this._autoReset) {
-      this.reset();
     }
 
     console.log(this._buffer);

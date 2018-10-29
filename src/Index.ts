@@ -1,5 +1,2 @@
-import {FTerminal} from "./FTerminal";
-import {PTerminal} from "./PTerminal";
-
-export {FTerminal};
-export {PTerminal};
+import {Terminal} from "./Terminal";
+export {Terminal};

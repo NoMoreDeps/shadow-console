@@ -16,5 +16,8 @@
   "license": "MIT",
   "devDependencies": {
     "jest-cli": "^13.2.3"
+  },
+  "dependencies": {
+    "@types/node": "^10.12.0"
   }
 }
