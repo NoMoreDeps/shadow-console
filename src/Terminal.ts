@@ -92,7 +92,8 @@ for(let i in Color16) {
       .text(text)
       ["_color"](endingForeColor);
   }
-  Terminal.prototype[`bg${i}`] = function(text: string = "") {
+  let j = i[0].toUpperCase() + i.substr(1);
+  Terminal.prototype[`bg${j}`] = function(text: string = "") {
     return  text ===  "" ? this : (this as Terminal)
       ["_color"](BackColor[Color16[i]])
       .text(text)

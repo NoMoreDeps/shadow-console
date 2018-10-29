@@ -11,6 +11,7 @@ term.write(lbl.render()[0]);
 lbl.w = 2;
 lbl.foreColor = void 0;
 lbl.backColor = BackColor[Color16.lightRed];
+term["_color"](BackColor[Color16.blue]).drawLine(" ")["_color"](49);
 term.bold("bold ")
   .italic("italic ")
   .underline("underline ")

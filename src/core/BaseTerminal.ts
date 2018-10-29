@@ -104,9 +104,9 @@ export abstract class BaseTerminal extends EventEmitter {
       line += char;
     }
 
-    let old = this._buffer;
-    this.write(line);
-    this._buffer = old;
+    //let old = this._buffer;
+    this.text(line);
+    //this._buffer = old;
 
     return this;
   }
